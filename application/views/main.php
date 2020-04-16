@@ -39,7 +39,8 @@
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
-    <div class="container d-flex">
+    <?php if ($menu == 'home') { ?>
+      <div class="container d-flex">
 
       <div class="logo mr-auto">
         <h1 class="text-light"><a href="<?= base_url(); ?>"><span>Contoh Bank</span></a></h1>
@@ -92,6 +93,17 @@
       </div>
 
     </div>
+     
+    <?php }else{?>
+          <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="<?= base_url(); ?>"><span class="iconify" data-icon="bx-bx-arrow-back" data-inline="false"></span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+    </div>
+   <?php } ?>
   </header><!-- End Header -->
 
 <?php $this->load->view($main); ?>
@@ -181,6 +193,7 @@
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+  <script src="https://code.iconify.design/1/1.0.5/iconify.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
